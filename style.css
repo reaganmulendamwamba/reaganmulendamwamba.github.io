@@ -1,0 +1,720 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: 0;
+}
+
+body {
+    color: #000;
+}
+
+i {
+    color: white;
+    padding: 0.6rem;
+}
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: black;
+    height: 10vh;
+    color: white;
+    padding: 1rem 4rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-hr {
+    position: sticky;
+    top: 100px;
+    z-index: 100;
+}
+
+
+header span {
+    color: orange;
+    font-size: 3rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+header p {
+    font-size: 2rem;
+}
+
+header nav ul li {
+    display: inline-block;
+    margin-right: 1rem;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: 400;
+    font-size: 1.4rem;
+    position: relative;
+    transition: .6s;
+}
+
+header nav ul li a::after {
+    content: '';
+    height: 3px;
+    background: orange;
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 2%;
+    transition: 0.6s;
+}
+
+header nav ul li a:hover::after {
+    width: 100%;
+}
+
+
+
+
+header select {
+    margin-right: 4rem;
+}
+
+main {
+    background: url(./assets/auraback.png);
+    background-position: center;
+    background-size: cover;
+    min-height: 88vh;
+    color: white;
+    padding: 0 4rem;
+
+}
+
+.hero h2 {
+    padding: 7rem 0 2rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 4rem;
+}
+
+.hero p {
+    padding: 0.2em;
+    font-size: 1.7rem;
+    font-family: sans-serif;
+}
+
+#metier {
+    color: orange;
+}
+
+.moov {
+    padding: 1rem 0;
+    font-size: 2rem;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.btn-hero {
+    margin: 2rem 0;
+    display: flex;
+    gap: 1rem;
+
+}
+
+.btn-hero a {
+    text-decoration: none;
+    color: #000;
+    padding: 0.5rem 0.7rem;
+    background: orange;
+    font-weight: 600;
+    border-radius: 16px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    transition: .6s;
+}
+
+
+.btn-hero a:hover {
+    color: red;
+    background: #000;
+    transform: translateY(3px);
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 20vh;
+    adding: 7rem 0 2rem;
+    background: #000000cd;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 600;
+    padding: 0 4rem;
+}
+
+.email,
+.tel,
+.copy,
+.networks {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+select {
+    background: #000;
+    padding: 0.5rem;
+    color: white;
+    font-weight: 600;
+    border-radius: 12px;
+}
+
+
+
+
+
+/* SECTION CONTACT */
+
+
+.form {
+    display: flex;
+    align-items: center;
+    padding: 4rem;
+    width: 90%;
+    height: 70vh;
+    background: #5f3232;
+    color: white;
+}
+
+.form-gauche {
+    flex-basis: 50%;
+
+}
+
+.contact-form {
+    padding: 0 0 4rem 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 900;
+}
+
+.phone-form {
+    padding: 0.6rem 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 700;
+}
+
+.email-form {
+    padding-top: 2rem;
+    padding-bottom: 0.6rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 700;
+}
+
+.form-gauche {
+    flex-basis: 50%;
+    width: 100%;
+}
+
+form input {
+    width: 100%;
+    border: 0;
+    outline: none;
+    padding: 10px;
+    margin: 15px 0;
+    color: #000;
+    border-radius: 6px;
+}
+
+form textarea {
+    padding: 1rem;
+}
+
+.contact-gauche {
+    flex-basis: 50%;
+}
+
+form {
+    display: grid;
+}
+
+.btn-contact {
+    text-decoration: none;
+    color: #000;
+    padding: 0.5rem 0.7rem;
+    background: orange;
+    font-weight: 600;
+    border-radius: 16px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    transition: .6s;
+    margin-top: 8px;
+    cursor: pointer;
+}
+
+.btn-contact:hover {
+    color: red;
+    background: #000;
+    transform: translateY(3px);
+}
+
+
+/* A PROPOS DE MOI */
+
+.main-about {
+    background: #000;
+    text-align: center;
+    height: 250vh;
+}
+
+.whobref {
+    padding-bottom: 2rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 2rem 20rem;
+}
+
+.whobref h1 {
+    font-size: 3rem;
+}
+
+.whobref p {
+    font-family: sans-serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #ffffffd1;
+    padding: 1rem;
+
+
+}
+
+.whomore {
+    display: flex;
+    padding-top: 5rem;
+}
+
+.whomorepicture img {
+    border-radius: 12px;
+    max-width: 100%;
+}
+
+.whomoretext {
+    flex-basis: 60%;
+    padding-right: 2rem;
+}
+
+.whomorepicture {
+    flex-basis: 30%;
+}
+
+.whomoretext h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.whomoretext {
+    padding-left: 0.7rem;
+    text-align: left;
+    font-size: 1.5rem;
+}
+
+.whomoretext p {
+    padding: 1rem 0 1rem 0;
+    color: #ffffffd1;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.whomoretext a {
+    text-decoration: none;
+    color: #000;
+    padding: 0.5rem 0.7rem;
+    background: orange;
+    font-weight: 600;
+    border-radius: 16px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    transition: .6s;
+    display: inline-block;
+    margin-top: 0.5rem;
+}
+
+.whomoretext a:hover {
+    color: red;
+    background: #000;
+    transform: translateY(3px);
+}
+
+.skils-about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    padding: 4rem 0 2rem;
+}
+
+.web-dev-about,
+.IT-Support,
+.No-code-about,
+.Workflow {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding: 2rem 1rem;
+    border-radius: 12px;
+    border: dashed rgb(101, 74, 24);
+    background: rgb(66, 56, 56);
+    transition: .6s;
+    font-weight: 500;
+}
+
+.web-dev-about h3,
+.IT-Support h3,
+.No-code-about h3,
+.Workflow h3 {
+    padding: 1.2rem 0;
+}
+
+.web-dev-about p,
+.IT-Support p,
+.No-code-about p,
+.Workflow p {
+    padding-top: 10px;
+    font-size: 1.1em;
+}
+
+.web-dev-about:hover {
+    background: rgba(255, 166, 0, 0.251);
+    transform: translateY(-12px);
+}
+
+.IT-Support:hover {
+    background: rgba(255, 166, 0, 0.251);
+    transform: translateY(-12px);
+}
+
+.No-code-about:hover {
+    background: rgba(255, 166, 0, 0.251);
+    transform: translateY(-12px);
+}
+
+.Workflow:hover {
+    background: rgba(255, 166, 0, 0.251);
+    transform: translateY(-12px);
+}
+
+#realisations-about {
+    padding: 1rem;
+}
+
+#realisations-about h4 {
+    padding: 2rem;
+    font-size: 1.6rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 600;
+}
+
+.realisations-about-container {
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+}
+
+.no-code-realisations {
+    background: rgba(63, 36, 63, 0.711);
+    padding: 1rem;
+    height: 330px;
+    border-radius: 16px;
+    border: solid rgba(255, 166, 0, 0.203);
+    transition: .6s;
+}
+
+.no-code-realisations:hover {
+    background: rgba(13, 26, 84, 0.54);
+    transform: translateY(-12px);
+}
+
+.no-code-realisations p {
+    padding: 1rem;
+    font-size: 1.2rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+
+.no-code-realisations a {
+    text-decoration: none;
+    color: #000;
+    padding: 0.2rem 0.5rem;
+    background: orange;
+    font-weight: 600;
+    border-radius: 16px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    transition: .6s;
+    display: inline-block;
+    margin-top: 0.5rem;
+}
+
+.no-code-realisations a:hover {
+    color: red;
+    background: #000;
+    transform: translateY(3px);
+}
+
+.devise {
+    font-size: 2rem;
+    padding-top: 4rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.devise-container {
+    padding: 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+
+.devise-container p {
+    background-color: #1d0c0c;
+    border-radius: 2rem 0;
+    padding: 1rem 1rem;
+}
+
+#main-cv {
+    background: #111010;
+    text-align: center;
+    padding: 4rem;
+}
+
+#main-cv h1 {
+    padding: 2rem;
+    font-size: 4rem;
+    font-family: sans-serif;
+    font-style: italic;
+}
+
+#main-cv p {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-style: italic;
+}
+
+.first-about {
+    font-size: 1.5rem;
+    padding: 3rem 20rem;
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    line-height: 2.3rem;
+}
+
+.card-cv {
+    display: flex;
+}
+
+.card-cv span {
+    font-weight: 700;
+    color: rgb(208, 98, 98);
+}
+
+.formation-cv {
+    flex-basis: 50%;
+    text-align: left;
+}
+
+.formation-cv p,
+.experience-cv p {
+    padding-bottom: 1rem;
+    color: azure;
+}
+
+.formation-cv h2,
+.experience-cv h2 {
+    padding-bottom: 2rem;
+    font-weight: 600;
+    font-size: 1.9rem;
+}
+
+.formation-cv h3,
+.experience-cv h3 {
+    padding-bottom: 1rem;
+    font-size: 1.5rem;
+    color: rgb(128, 86, 10);
+}
+
+.experience-cv {
+    flex-basis: 50%;
+    text-align: left;
+    padding-left: 1rem;
+}
+
+.expertise-cv {
+    padding: 3rem 0;
+}
+
+.expertise-cv h2 {
+    padding: 2rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.expertise-cv-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.expertise-dev-web,
+.expertise-it-support,
+.expertise-no-code {
+    padding: 2rem;
+    background: rgb(67, 47, 2);
+    border-radius: 12px;
+    transition: .9s;
+}
+
+.expertise-no-code:hover {
+    color: red;
+    background: #1d1303;
+    transform: rotate(1turn);
+    font-weight: 700;
+    font-size: 1.6rem;
+}
+
+.expertise-it-support:hover {
+    color: red;
+    background: #1d1303;
+    transform: rotate(1turn);
+    font-weight: 700;
+    font-size: 1.6rem;
+}
+
+.expertise-dev-web:hover {
+    color: red;
+    background: #1d1303;
+    transform: rotate(1turn);
+    font-weight: 700;
+    font-size: 1.6rem;
+}
+
+
+
+.expertise-dev-web h3,
+.expertise-it-support h3,
+.expertise-no-code h3 {
+    padding: 1rem;
+    color: rgb(208, 98, 98);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.expertise-dev-web p,
+.expertise-it-support p,
+.expertise-no-code p {
+    padding: 1rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.certications-cv h2 {
+    padding: 2rem;
+}
+
+.certifiactons-cv-container {
+    display: flex;
+}
+
+.certications-cv-content {
+    text-align: left;
+    flex-basis: 50%;
+}
+
+.certications-cv-content h3 {
+    padding: 1rem 0;
+    color: rgb(208, 98, 98);
+    font-size: 1.5rem;
+}
+
+.skill-bar {
+    width: 100%;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    height: 25px;
+    overflow: hidden;
+    margin: 1rem 2.5rem;
+}
+
+.skill-progress-desktop {
+    background-color: #e0982a;
+    border-radius: 10px;
+    text-align: center;
+    line-height: 25px;
+    color: rgb(2, 0, 0);
+    font-size: 14px;
+}
+
+#main-cv a {
+    text-decoration: none;
+    color: #000;
+    padding: 1rem 1rem;
+    background: orange;
+    font-weight: 600;
+    border-radius: 16px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    transition: .6s;
+    display: inline-block;
+    margin-top: 0.5rem;
+}
+
+#main-cv a:hover {
+    color: red;
+    background: #000;
+    transform: translateY(3px);
+}
+
+#main-services {
+    background: #000;
+    color: white;
+    padding: 2rem;
+    text-align: center;
+}
+
+#main-services h1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: italic;
+    padding: 2rem;
+}
+
+#main-services p {
+    font-style: italic;
+    font-size: 1.7rem;
+}
+
+.main-services-container-dev,
+.main-services-container-it-support,
+.main-services-container-no-code {
+    padding: 3rem 0;
+}
+
+.main-services-container-dev p,
+.main-services-container-it-support p,
+.main-services-container-no-code p {
+    padding: 2rem 0;
+}
+
+
+
+.main-services-container {
+    text-align: left;
+}
+
+.main-services-container a {
+    text-decoration: none;
+    color: #000;
+    padding: 0.2rem 0.2rem;
+    background: orange;
+    font-weight: 600;
+    border-radius: 16px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    transition: .6s;
+    display: inline-block;
+    margin-top: 0.5rem;
+}
+
+.main-services-container a:hover {
+    color: red;
+    background: #000;
+    transform: translateY(3px);
+}

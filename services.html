@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+    <header cla>
+        <div class="logo">
+            <p><span class="specialcase">R</span>eagan Mulenda.</p>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="./index.html">Acceuil</a></li>
+                <li><a href="a-propos.html">A propos</a></li>
+                <li><a href="cv.html">CV</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="shop.html" class="blocked">Shop</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+        <select name="lang" id="lang" class="lang">
+            <option value="index.html" selected class="FR">🇫🇷 Français</option>
+            <option value="services-en.html" class="EN">🇺🇸 English</option>
+        </select>
+    </header>
+    <hr class="header-hr">
+
+
+    <div id="main-services">
+        <h1>SERVICES</h1>
+        <p>Des solutions adaptées à vos besoins</p>
+
+        <div class="main-services-container">
+            <div class="main-services-container-dev">
+                <h2><span>01</span> DÉVELOPPEMENT WEB</h2>
+                <p>
+                    Je transforme vos idées en interfaces web
+                    modernes, responsives et fonctionnelles.
+                </p>
+
+                <a href="./Sunnyside/essai.html">Voir les réalisations <i
+                        class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+
+            <div class="main-services-container-it-support">
+                <h2> <span>02</span> IT SUPPORT</h2>
+
+                <p>
+                    J'accompagne les utilisateurs dans le diagnostic
+                    et la résolution de leurs problèmes informatiques.
+                </p>
+
+
+                <a href="https://wa.me/860946087?text=Bonjour, pouvez-me dire un peu plus sur le sujet"
+                    target="_blank">Demander une assistance <i class="fa-solid fa-comments"></i></a>
+            </div>
+
+            <div class="main-services-container-no-code">
+                <h2><span>03</span> NO-CODE</h2>
+
+                <p> Je conçois des solutions numériques simples,
+                    rapides et automatisées grâce au no-code.
+                </p>
+
+
+                <a href="https://wa.me/860946087?text=Bonjour, pouvez-me dire un peu plus sur le sujet"
+                    target="_blank">Discuter de votre besoin <i class="fa-solid fa-comments"></i></a>
+            </div>
+
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+    <footer>
+        <div class="tel">
+            <p>Téléphone</p>
+            <p class="number">+243860946087</p>
+        </div>
+
+        <div class="email">
+            <p>Email</p>
+            <p class="emial">reaganmulendamwamba@gmail.com</p>
+        </div>
+
+        <div class="networks">
+            <p>Mes Réseaux</p>
+            <div class="networks-links">
+                <a href="https://www.facebook.com/reaganmulendamwamba"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.linkedin.com/in/reaganmulenda"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="...."><i class="fa-brands fa-tiktok"></i></a>
+            </div>
+        </div>
+
+        <div class="copy">
+            <p>Coded By @Reagan</p>
+        </div>
+
+
+    </footer>
+
+
+    <script>
+
+
+        const lang = document.getElementById('lang')
+
+
+        lang.addEventListener('change', function () {
+            window.location.href = this.value;
+        })
+
+        const code = document.querySelector('.blocked');
+
+        code.addEventListener('click', () => {
+            let reponse;
+            do {
+                reponse = prompt("Rentrez le code d'accès");
+                if (reponse !== '1912') {
+                    prompt("Rentrez la bonne clé");
+                }
+            } while (reponse !== '1912');
+
+            alert("Accès autorisé !");
+        });
+
+
+
+    </script>
+</body>
+
+</html>

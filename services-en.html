@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+    <header>
+
+        <div class="logo">
+            <p><span class="specialcase">R</span>eagan Mulenda.</p>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="index-en.html">Home</a></li>
+                <li><a href="about-en.html">About</a></li>
+                <li><a href="cv-en.html">Resume</a></li>
+                <li><a href="services-en.html">Services</a></li>
+                <li><a href="shop-en.html" class="blocked">Shop</a></li>
+                <li><a href="contact-en.html">Contact</a></li>
+            </ul>
+        </nav>
+
+        <select name="lang" id="lang" class="lang">
+            <option value="services.html" class="FR">🇫🇷 Français</option>
+            <option value="services-en.html" selected class="EN">🇺🇸 English</option>
+        </select>
+
+    </header>
+
+    <hr class="header-hr">
+
+
+    <div id="main-services">
+
+        <h1>SERVICES</h1>
+
+        <p>Solutions adapted to your needs</p>
+
+
+        <div class="main-services-container">
+
+            <div class="main-services-container-dev">
+
+                <h2>
+                    <span>01</span> WEB DEVELOPMENT
+                </h2>
+
+                <p>
+                    I turn your ideas into modern, responsive
+                    and functional web interfaces.
+                </p>
+
+                <a href="./Sunnyside/essai.html">
+                    View my work
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+
+            </div>
+
+
+            <div class="main-services-container-it-support">
+
+                <h2>
+                    <span>02</span> IT SUPPORT
+                </h2>
+
+                <p>
+                    I help users diagnose and resolve
+                    their IT problems.
+                </p>
+
+                <a href="https://wa.me/860946087?text=Hello%2C%20I%20would%20like%20to%20know%20more%20about%20your%20IT%20Support%20service."
+                    target="_blank">
+                    Request assistance
+                    <i class="fa-solid fa-comments"></i>
+                </a>
+
+            </div>
+
+
+            <div class="main-services-container-no-code">
+
+                <h2>
+                    <span>03</span> NO-CODE
+                </h2>
+
+                <p>
+                    I design simple, fast and automated
+                    digital solutions using No-Code tools.
+                </p>
+
+                <a href="https://wa.me/860946087?text=Hello%2C%20I%20would%20like%20to%20discuss%20a%20No-Code%20solution."
+                    target="_blank">
+                    Discuss your needs
+                    <i class="fa-solid fa-comments"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <footer>
+
+        <div class="tel">
+            <p>Phone</p>
+            <p class="number">+243860946087</p>
+        </div>
+
+        <div class="email">
+            <p>Email</p>
+            <p class="emial">reaganmulendamwamba@gmail.com</p>
+        </div>
+
+        <div class="networks">
+            <p>My Socials</p>
+
+            <div class="networks-links">
+
+                <a href="https://www.facebook.com/reaganmulendamwamba">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+
+                <a href="https://www.linkedin.com/in/reaganmulenda">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+
+                <a href="....">
+                    <i class="fa-brands fa-tiktok"></i>
+                </a>
+
+            </div>
+        </div>
+
+        <div class="copy">
+            <p>Coded By @Reagan</p>
+        </div>
+
+    </footer>
+
+
+    <script>
+
+        const lang = document.getElementById('lang')
+
+
+        lang.addEventListener('change', function () {
+            window.location.href = this.value;
+        })
+
+        const code = document.querySelector('.blocked');
+
+        code.addEventListener('click', () => {
+
+            let reponse;
+
+            do {
+
+                reponse = prompt("Enter the access code");
+
+                if (reponse !== '1912') {
+                    prompt("Enter the correct key");
+                }
+
+            } while (reponse !== '1912');
+
+            alert("Access granted!");
+
+        });
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body class="body-contact">
+
+    <header>
+
+        <div class="logo">
+            <p><span class="specialcase">R</span>eagan Mulenda.</p>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="index-en.html">Home</a></li>
+                <li><a href="about-en.html">About</a></li>
+                <li><a href="cv-en.html">Resume</a></li>
+                <li><a href="services-en.html">Services</a></li>
+                <li><a href="shop-en.html" class="blocked">Shop</a></li>
+                <li><a href="contact-en.html">Contact</a></li>
+            </ul>
+        </nav>
+
+        <select name="lang" id="lang" class="lang">
+            <option value="contact.html" class="FR">🇫🇷 Français</option>
+            <option value="contact-en.html" selected class="EN">🇺🇸 English</option>
+        </select>
+
+    </header>
+
+    <hr class="header-hr">
+
+
+    <div class="form">
+
+        <div class="contact-gauche">
+
+            <h3 class="contact-form">Contact</h3>
+
+            <h4 class="phone-form">Phone</h4>
+            <p>+243860946087</p>
+
+            <h4 class="email-form">Email</h4>
+            <p>reaganmulendamwamba@gmail.com</p>
+
+        </div>
+
+
+        <div class="form-gauche">
+
+            <form>
+
+                <label for="firstname" id="firstname">First name</label>
+                <input type="text" name="firstname" id="firstname" required>
+
+
+                <label for="firstname" id="laststname">Last name</label>
+                <input type="text" name="laststname" id="laststname" required>
+
+
+                <label for="message" id="message">Message</label>
+                <textarea name="message" id="message" rows="8" required></textarea>
+
+
+                <button type="submit" class="btn-contact">
+                    Send
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <footer>
+
+        <div class="tel">
+            <p>Phone</p>
+            <p class="number">+243860946087</p>
+        </div>
+
+        <div class="email">
+            <p>Email</p>
+            <p class="emial">reaganmulendamwamba@gmail.com</p>
+        </div>
+
+        <div class="networks">
+
+            <p>My Socials</p>
+
+            <div class="networks-links">
+
+                <a href="https://www.facebook.com/reaganmulendamwamba">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+
+                <a href="https://www.linkedin.com/in/reaganmulenda">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+
+                <a href="....">
+                    <i class="fa-brands fa-tiktok"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="copy">
+            <p>Coded By @Reagan</p>
+        </div>
+
+    </footer>
+
+
+    <script>
+
+
+        const lang = document.getElementById('lang')
+
+
+        lang.addEventListener('change', function () {
+            window.location.href = this.value;
+        })
+
+        const code = document.querySelector('.blocked');
+
+        code.addEventListener('click', () => {
+
+            let reponse;
+
+            do {
+
+                reponse = prompt("Enter the access code");
+
+                if (reponse !== '1912') {
+                    prompt("Enter the correct key");
+                }
+
+            } while (reponse !== '1912');
+
+            alert("Access granted!");
+
+        });
+
+    </script>
+
+</body>
+
+</html>

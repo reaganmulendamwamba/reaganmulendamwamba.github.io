@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Texte animé</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 50px;
+        }
+
+        span {
+            color: #007bff;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Hello, je suis Reagan Mulenda</h1>
+
+    <h2>
+        Je suis <span id="metier">Développeur Web</span>
+    </h2>
+
+    <script>
+        const metiers = [
+            "Développeur Web",
+            "IT Support",
+            "Expert en No-Code"
+        ];
+
+        let index = 0;
+
+        setInterval(() => {
+            index++;
+
+            if (index === metiers.length) {
+                index = 0;
+            }
+
+            document.getElementById("metier").textContent = metiers[index];
+
+        }, 5000);
+    </script>
+
+</body>
+
+</html>

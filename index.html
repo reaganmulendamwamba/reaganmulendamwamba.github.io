@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Personnal</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            <p><span class="specialcase">R</span>eagan Mulenda.</p>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="#">Acceuil</a></li>
+                <li><a href="a-propos.html">A propos</a></li>
+                <li><a href="cv.html">CV</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="shop.html" class="blocked">Shop</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+        <select name="lang" id="lang" class="lang">
+            <option value="index.html" selected class="FR">🇫🇷 Français</option>
+            <option value="index-en.html" class="EN">🇺🇸 English</option>
+        </select>
+    </header>
+    <hr class="header-hr">
+
+    <main>
+        <div class="hero">
+            <h2>Hello, je suis REAGAN <br>Mulenda </h2>
+
+            <h3 class="moov">
+                Je suis un <span id="metier">Développeur Web Full Stack </span>
+            </h3>
+
+            <p>
+                Je conçois des sites web modernes, responsifs et fonctionnels, <br>avec une solide expérience en
+                Support
+                informatique et No-Code.
+            </p>
+
+            <p>
+                Tu veux donner vie à tes idées ? Trouver une solution à un problème <br> lié à l'IT ?
+                <br>Voici l'endroit idéal:
+            </p>
+        </div>
+
+        <div class="btn-hero btn">
+            <a href="services.html">Mes services</a>
+            <a href="./contact.html">Me contacter</a>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="tel">
+            <p>Téléphone</p>
+            <p class="number">+243860946087</p>
+        </div>
+
+        <div class="email">
+            <p>Email</p>
+            <p class="emial">reaganmulendamwamba@gmail.com</p>
+        </div>
+
+        <div class="networks">
+            <p>Mes Réseaux</p>
+            <div class="networks-links">
+                <a href="https://www.facebook.com/reaganmulendamwamba"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.linkedin.com/in/reaganmulenda"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="...."><i class="fa-brands fa-tiktok"></i></a>
+            </div>
+        </div>
+
+        <div class="copy">
+            <p>Coded By @Reagan</p>
+        </div>
+
+
+    </footer>
+
+
+
+
+
+    <script>
+
+        const lang = document.getElementById('lang')
+
+
+        lang.addEventListener('change', function () {
+            window.location.href = this.value;
+        })
+
+        const metiers = [
+            "Développeur Web Full Stack",
+            "IT Support",
+            "Passionné du No-Code"
+        ];
+
+        let index = 0;
+
+        setInterval(() => {
+            index++;
+
+            if (index === metiers.length) {
+                index = 0;
+            }
+
+            document.getElementById("metier").textContent = metiers[index];
+
+        }, 3000);
+
+
+        const code = document.querySelector('.blocked');
+
+        code.addEventListener('click', () => {
+            let reponse;
+            do {
+                reponse = prompt("Rentrez le code d'accès");
+                if (reponse !== '1912') {
+                    prompt("Rentrez la bonne clé");
+                }
+            } while (reponse !== '1912');
+
+            alert("Accès autorisé !");
+        });
+
+    </script>
+
+</body>
+
+</html>
