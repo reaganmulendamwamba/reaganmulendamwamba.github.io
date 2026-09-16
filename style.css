@@ -81,6 +81,11 @@ header select {
     margin-right: 4rem;
 }
 
+
+.profile-reagan {
+    display: none;
+}
+
 main {
     background: url(./assets/auraback.png);
     background-position: center;
@@ -142,13 +147,13 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 20vh;
+    /* height: vh; */
     adding: 7rem 0 2rem;
     background: #000000cd;
     color: white;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: 600;
-    padding: 0 4rem;
+    padding: 2rem 4rem;
 }
 
 .email,
@@ -180,14 +185,13 @@ select {
     display: flex;
     align-items: center;
     padding: 4rem;
-    width: 90%;
-    height: 70vh;
     background: #5f3232;
     color: white;
+
 }
 
 .form-gauche {
-    flex-basis: 50%;
+    width: 100%;
 
 }
 
@@ -261,8 +265,7 @@ form {
 
 .main-about {
     background: #000;
-    text-align: center;
-    height: 250vh;
+    display: block;
 }
 
 .whobref {
@@ -346,6 +349,7 @@ form {
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
     padding: 4rem 0 2rem;
+    transition: .6s;
 }
 
 .web-dev-about,
@@ -369,6 +373,8 @@ form {
 .Workflow h3 {
     padding: 1.2rem 0;
 }
+
+
 
 .web-dev-about p,
 .IT-Support p,
@@ -418,10 +424,10 @@ form {
 .no-code-realisations {
     background: rgba(63, 36, 63, 0.711);
     padding: 1rem;
-    height: 330px;
+    /* height: 330px; */
     border-radius: 16px;
     border: solid rgba(255, 166, 0, 0.203);
-    transition: .6s;
+    transition: .6s
 }
 
 .no-code-realisations:hover {
@@ -474,6 +480,7 @@ form {
     background-color: #1d0c0c;
     border-radius: 2rem 0;
     padding: 1rem 1rem;
+    margin: 1rem;
 }
 
 #main-cv {
@@ -496,7 +503,7 @@ form {
 
 .first-about {
     font-size: 1.5rem;
-    padding: 3rem 20rem;
+    padding: 3rem 2rem;
     text-align: center;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     line-height: 2.3rem;
@@ -524,7 +531,7 @@ form {
 
 .formation-cv h2,
 .experience-cv h2 {
-    padding-bottom: 2rem;
+    padding-bottom: 4rem;
     font-weight: 600;
     font-size: 1.9rem;
 }
@@ -543,7 +550,7 @@ form {
 }
 
 .expertise-cv {
-    padding: 3rem 0;
+    padding: 2rem 1rem;
 }
 
 .expertise-cv h2 {
@@ -564,13 +571,13 @@ form {
     padding: 2rem;
     background: rgb(67, 47, 2);
     border-radius: 12px;
-    transition: .9s;
+    transition: .3s;
 }
 
 .expertise-no-code:hover {
     color: red;
     background: #1d1303;
-    transform: rotate(1turn);
+    transform: scale(0.9);
     font-weight: 700;
     font-size: 1.6rem;
 }
@@ -578,7 +585,7 @@ form {
 .expertise-it-support:hover {
     color: red;
     background: #1d1303;
-    transform: rotate(1turn);
+    transform: scale(0.9);
     font-weight: 700;
     font-size: 1.6rem;
 }
@@ -586,7 +593,7 @@ form {
 .expertise-dev-web:hover {
     color: red;
     background: #1d1303;
-    transform: rotate(1turn);
+    transform: scale(0.9);
     font-weight: 700;
     font-size: 1.6rem;
 }
@@ -628,7 +635,6 @@ form {
 }
 
 .skill-bar {
-    width: 100%;
     background-color: #e0e0e0;
     border-radius: 10px;
     height: 25px;
@@ -718,3 +724,209 @@ form {
     background: #000;
     transform: translateY(3px);
 }
+
+
+/*MEDIAS QUERIES*/
+
+
+nav .fa-solid {
+    display: none;
+}
+
+@media (max-width:1470px) {
+    body {
+        background: #000;
+        text-align: center;
+    }
+
+
+
+
+    .hero {
+        text-align: center;
+    }
+
+    .profile-reagan {
+        display: block;
+    }
+
+
+    main {
+        background: #000;
+        text-align: center;
+        height: 100%;
+    }
+
+    main img {
+        text-align: center;
+        display: inline-block;
+        border-radius: 5rem;
+        width: 50%;
+        height: 100%;
+        margin: 2rem auto;
+        transition: .6s;
+    }
+
+    main img:hover {
+        transform: scale(1.1);
+    }
+
+    .body-contact {
+        text-align: left;
+    }
+
+    .btn-hero {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    footer {
+        background: #222222cd;
+        ;
+    }
+
+    .btn-hero a {
+        display: inline-block;
+        text-align: center;
+    }
+
+
+    .whomore {
+        display: block;
+        text-align: center;
+    }
+
+    .realisations-about-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .whomoretext {
+        text-align: center;
+    }
+}
+
+@media (max-width:1290px) {
+    .realisations-about-container {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (max-width: 1180px) {
+    nav .fa-solid {
+        display: block;
+        font-size: 25px;
+    }
+
+    nav ul {
+        background: rgb(69, 49, 13);
+        position: fixed;
+        top: 0;
+        left: -200px;
+        width: 150px;
+        height: 100vh;
+        padding-top: 4rem;
+        text-align: left;
+        z-index: 2;
+    }
+
+    main,
+    .form,
+    .main-about,
+    #main-services,
+    footer,
+    #main-cv {
+        padding-left: 100px;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 20px;
+
+    }
+
+    .header-hr {
+        display: none;
+    }
+
+    #main-cv {
+        padding: 2rem 0 0 160px;
+    }
+
+    .first-about {
+        font-size: 1.5rem;
+        padding: 3rem 2rem;
+        text-align: center;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        line-height: 2.3rem;
+    }
+
+    nav ul .fa-solid {
+        position: absolute;
+        top: 25px;
+        left: 10px;
+        cursor: pointer;
+    }
+
+    .card-cv {
+        display: block;
+        width: 100%;
+    }
+
+
+
+    @media (max-width:1050px) {
+        footer {
+            display: block;
+        }
+    }
+
+    @media (max-width:850px) {
+        .realisations-about-container {
+            display: block;
+        }
+
+        .devise-container {
+            padding: 4rem;
+            display: block;
+        }
+
+        .skils-about {
+            display: block;
+            margin: 12px;
+            padding: 4rem 0 2rem;
+        }
+
+        .web-dev-about,
+        .IT-Support,
+        .No-code-about,
+        .Workflow {
+            margin: 1rem;
+        }
+
+        .expertise-cv-container {
+            display: block;
+        }
+
+        .expertise-dev-web,
+        .expertise-it-support,
+        .expertise-no-code {
+            margin: 2rem;
+        }
+
+        .certifiactons-cv-container {
+            display: block;
+            text-align: center;
+        }
+
+
+
+
+    }

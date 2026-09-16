@@ -5,45 +5,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>a propos</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
 </head>
 
 <body>
-    <header cla>
+    <header>
         <div class="logo">
             <p><span class="specialcase">R</span>eagan Mulenda.</p>
         </div>
 
         <nav>
-            <ul>
-                <li><a href="./index.html">Acceuil</a></li>
-                <li><a href="a-propos.html">A propos</a></li>
-                <li><a href="cv.html">CV</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="shop.html" class="blocked">Shop</a></li>
-                <li><a href="contact.html">Contact</a></li>
+            <ul id="sidemenu">
+                <li><a href="/index.html">Acceuil</a></li>
+                <li><a href="/pages/a-propos.html">A propos</a></li>
+                <li><a href="/pages/cv.html">CV</a></li>
+                <li><a href="/pages/services.html">Services</a></li>
+                <li><a href="/pages/shop.html" class="blocked">Shop</a></li>
+                <li><a href="/pages/contact.html">Contact</a></li>
+                <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
             </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
         </nav>
 
         <select name="lang" id="lang" class="lang">
             <option value="index.html" selected class="FR">🇫🇷 Français</option>
-            <option value="about-en.html" class="EN">🇺🇸 English</option>
+            <option value="/lang-package/about-en.html" class="EN">🇺🇸 English</option>
         </select>
     </header>
     <hr class="header-hr">
 
     <main class="main-about">
 
-
-        <!-- <div class="whobref">
-            <h1>Qui suis-je ?</h1>
-            <p>
-                Je construis mon parcours dans le monde du numérique précisement dans le développement web,
-                la résolution des problèmes liés à l'IT ainsi de l'automatisation grâce à l'IA.
-            <p>
-        </div> -->
+        </div>
 
         <div class="whomore">
             <div class="whomoretext">
@@ -71,7 +66,7 @@
 
             </div>
             <div class="whomorepicture">
-                <img src="./assets/veste.png" alt="picture of Reagan ">
+                <img src="/assets/veste.png" alt="picture of Reagan ">
             </div>
         </div>
 
@@ -139,7 +134,7 @@
                 <div class="no-code-realisations">
                     <h4>No-Code</h4>
                     <p class="title-realisations">Assistant Virtuel</p>
-                    <p>Je conçois des solutions no-code adaptées à des besoins spécifiques, notamment autour de
+                    <p>Je conçois des solutions no-code adaptées à des besoins spécifiques, <br> notamment autour de
                         l'automatisation et des bots.
                     </p>
 
@@ -186,7 +181,7 @@
 
 
 
-    <footer>
+    <footer id="footer">
         <div class="tel">
             <p>Téléphone</p>
             <p class="number">+243860946087</p>
@@ -238,6 +233,30 @@
             alert("Accès autorisé !");
         });
 
+
+
+    </script>
+
+
+    <script>
+
+        let sidemenu = document.getElementById("sidemenu")
+        let mainAbout = document.querySelector(".main-about")
+        let footer = document.getElementById("footer")
+
+        function openmenu() {
+            sidemenu.style.left = "0";
+            mainAbout.style.paddingLeft = "160px"
+            footer.style.paddingLeft = "160px"
+
+        }
+
+        function closemenu() {
+            sidemenu.style.left = "-200px";
+            mainAbout.style.paddingLeft = "100px"
+            footer.style.paddingLeft = "100px"
+
+        }
 
 
     </script>

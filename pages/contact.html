@@ -4,13 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Personnal</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Contact</title>
+    <link rel="stylesheet" href="/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 
-<body>
-
+<body class="body-contact">
     <header>
         <div class="logo">
             <p><span class="specialcase">R</span>eagan Mulenda.</p>
@@ -29,41 +28,41 @@
             <i class="fa-solid fa-bars" onclick="openmenu()"></i>
         </nav>
 
-
         <select name="lang" id="lang" class="lang">
             <option value="index.html" selected class="FR">🇫🇷 Français</option>
-            <option value="/lang-package/index-en.html" class="EN">🇺🇸 English</option>
+            <option value="/lang-package/contact-en.html" class="EN">🇺🇸 English</option>
         </select>
     </header>
     <hr class="header-hr">
 
-    <main id="main-acceuil">
-        <div class="hero">
-            <img src="assets/aura.png" alt="profile de Reagan Mulenda" class="profile-reagan">
-            <h2>Hello, je suis REAGAN <br>Mulenda </h2>
+    <div class="form">
+        <div class="contact-gauche">
+            <h3 class="contact-form">Contact</h3>
 
-            <h3 class="moov">
-                Je suis un <span id="metier">Développeur Web Full Stack </span>
-            </h3>
+            <h4 class="phone-form">Phone</h4>
+            <p>+243860946087</p>
 
-            <p>
-                Je conçois des sites web modernes, responsifs et fonctionnels, <br>avec une solide expérience en
-                Support
-                informatique et No-Code.
-            </p>
-
-            <p>
-                Tu veux donner vie à tes idées ? Trouver une solution à un problème <br> lié à l'IT ?
-                <br>Voici l'endroit idéal:
-            </p>
+            <h4 class="email-form">Email</h4>
+            <p>reaganmulendamwamba@gmail.com</p>
         </div>
 
-        <div class="btn-hero btn">
-            <a href="/pages/services.html">Mes services</a>
-            <a href="/pages/contact.html">Me contacter</a>
-        </div>
+        <div class="form-gauche">
+            <form>
+                <label for="firstname" id="firstname">Prénom</label>
+                <input type="text" name="firstname" id="firstname" required>
 
-    </main>
+                <label for="firstname" id="laststname">Nom</label>
+                <input type="text" name="laststname" id="laststname" required>
+
+                <label for="message" id="message">Message</label>
+                <textarea name="message" id="message" rows="8" required></textarea>
+
+                <button type="submit" class="btn-contact">Envoyer</button>
+
+            </form>
+        </div>
+    </div>
+
 
     <footer id="footer">
         <div class="tel">
@@ -92,10 +91,6 @@
 
     </footer>
 
-
-
-
-
     <script>
 
         const lang = document.getElementById('lang')
@@ -104,26 +99,6 @@
         lang.addEventListener('change', function () {
             window.location.href = this.value;
         })
-
-        const metiers = [
-            "Développeur Web Full Stack",
-            "IT Support",
-            "Passionné du No-Code"
-        ];
-
-        let index = 0;
-
-        setInterval(() => {
-            index++;
-
-            if (index === metiers.length) {
-                index = 0;
-            }
-
-            document.getElementById("metier").textContent = metiers[index];
-
-        }, 3000);
-
 
         const code = document.querySelector('.blocked');
 
@@ -139,31 +114,32 @@
             alert("Accès autorisé !");
         });
 
+
+
     </script>
 
     <script>
 
         let sidemenu = document.getElementById("sidemenu")
-        let mainAcceuil = document.getElementById("main-acceuil")
+        let form = document.querySelector(".form")
         let footer = document.getElementById("footer")
 
         function openmenu() {
             sidemenu.style.left = "0";
-            mainAcceuil.style.paddingLeft = "160px"
+            form.style.paddingLeft = "160px"
             footer.style.paddingLeft = "160px"
 
         }
 
         function closemenu() {
             sidemenu.style.left = "-200px";
-            mainAcceuil.style.paddingLeft = "100px"
+            form.style.paddingLeft = "100px"
             footer.style.paddingLeft = "100px"
 
         }
 
 
     </script>
-
 </body>
 
 </html>
