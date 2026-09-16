@@ -186,6 +186,10 @@ select {
     padding-bottom: 16px;
 }
 
+.form input {
+    padding: 0.8rem;
+}
+
 .form-gauche-container {
     padding-left: 100px;
     padding-top: 20px;
@@ -220,6 +224,10 @@ select {
 textarea {
     display: block;
     width: 100%;
+}
+
+.form button {
+    margin-top: 1rem;
 }
 
 .form-droite-container button {
@@ -797,6 +805,16 @@ nav .fa-solid {
         text-align: center;
     }
 
+    .form-gauche-container {
+        text-align: left;
+        padding-left: 2rem;
+    }
+
+    .form {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
     .card-cv {
         display: block;
     }
@@ -836,6 +854,6 @@ nav .fa-solid {
     .IT-Support,
     .No-code-about,
     .Workflow {
-        margin: 2rem;
+        margin: 1rem auto;
     }
 }
