@@ -22,39 +22,32 @@
                 <li><a href="/pages/a-propos.html">A propos</a></li>
                 <li><a href="/pages/cv.html">CV</a></li>
                 <li><a href="/pages/services.html">Services</a></li>
-                <li><a href="/pages/shop.html" class="blocked">Shop</a></li>
                 <li><a href="/pages/contact.html">Contact</a></li>
                 <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
             </ul>
             <i class="fa-solid fa-bars" onclick="openmenu()"></i>
         </nav>
 
-
-        <select name="lang" id="lang" class="lang">
-            <option value="index.html" selected class="FR">🇫🇷 Français</option>
-            <option value="/lang-package/index-en.html" class="EN">🇺🇸 English</option>
-        </select>
     </header>
-    <hr class="header-hr">
 
     <main id="main-acceuil">
         <div class="hero">
             <img src="assets/aura.png" alt="profile de Reagan Mulenda" class="profile-reagan">
-            <h2>Hello, je suis REAGAN <br>Mulenda </h2>
+            <h2>Hello, je suis REAGAN <br> Mulenda </h2>
 
             <h3 class="moov">
                 Je suis un <span id="metier">Développeur Web Full Stack </span>
             </h3>
 
             <p>
-                Je conçois des sites web modernes, responsifs et fonctionnels, <br>avec une solide expérience en
+                Je conçois des sites web modernes, responsifs et fonctionnels, avec une solide expérience en
                 Support
                 informatique et No-Code.
             </p>
 
             <p>
-                Tu veux donner vie à tes idées ? Trouver une solution à un problème <br> lié à l'IT ?
-                <br>Voici l'endroit idéal:
+                Tu veux donner vie à tes idées ? Trouver une solution à un problème lié à l'IT ?
+                Voici l'endroit idéal:
             </p>
         </div>
 
@@ -124,21 +117,6 @@
 
         }, 3000);
 
-
-        const code = document.querySelector('.blocked');
-
-        code.addEventListener('click', () => {
-            let reponse;
-            do {
-                reponse = prompt("Rentrez le code d'accès");
-                if (reponse !== '1912') {
-                    prompt("Rentrez la bonne clé");
-                }
-            } while (reponse !== '1912');
-
-            alert("Accès autorisé !");
-        });
-
     </script>
 
     <script>
@@ -148,16 +126,12 @@
         let footer = document.getElementById("footer")
 
         function openmenu() {
-            sidemenu.style.left = "0";
-            mainAcceuil.style.paddingLeft = "160px"
-            footer.style.paddingLeft = "160px"
+            sidemenu.style.right = "0";
 
         }
 
         function closemenu() {
-            sidemenu.style.left = "-200px";
-            mainAcceuil.style.paddingLeft = "100px"
-            footer.style.paddingLeft = "100px"
+            sidemenu.style.right = "-200px";
 
         }
 

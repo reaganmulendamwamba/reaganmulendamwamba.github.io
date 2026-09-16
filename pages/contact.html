@@ -21,23 +21,17 @@
                 <li><a href="/pages/a-propos.html">A propos</a></li>
                 <li><a href="/pages/cv.html">CV</a></li>
                 <li><a href="/pages/services.html">Services</a></li>
-                <li><a href="/pages/shop.html" class="blocked">Shop</a></li>
                 <li><a href="/pages/contact.html">Contact</a></li>
                 <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
             </ul>
             <i class="fa-solid fa-bars" onclick="openmenu()"></i>
         </nav>
 
-        <select name="lang" id="lang" class="lang">
-            <option value="index.html" selected class="FR">🇫🇷 Français</option>
-            <option value="/lang-package/contact-en.html" class="EN">🇺🇸 English</option>
-        </select>
     </header>
-    <hr class="header-hr">
 
     <div class="form">
-        <div class="contact-gauche">
-            <h3 class="contact-form">Contact</h3>
+        <div class="form-gauche-container">
+            <h3 class="form-gauche">Contact</h3>
 
             <h4 class="phone-form">Phone</h4>
             <p>+243860946087</p>
@@ -46,7 +40,7 @@
             <p>reaganmulendamwamba@gmail.com</p>
         </div>
 
-        <div class="form-gauche">
+        <div class="form-droite-container">
             <form>
                 <label for="firstname" id="firstname">Prénom</label>
                 <input type="text" name="firstname" id="firstname" required>
@@ -57,9 +51,10 @@
                 <label for="message" id="message">Message</label>
                 <textarea name="message" id="message" rows="8" required></textarea>
 
-                <button type="submit" class="btn-contact">Envoyer</button>
+
 
             </form>
+            <button type="submit" class="btn-contact">Envoyer</button>
         </div>
     </div>
 
@@ -100,20 +95,6 @@
             window.location.href = this.value;
         })
 
-        const code = document.querySelector('.blocked');
-
-        code.addEventListener('click', () => {
-            let reponse;
-            do {
-                reponse = prompt("Rentrez le code d'accès");
-                if (reponse !== '1912') {
-                    prompt("Rentrez la bonne clé");
-                }
-            } while (reponse !== '1912');
-
-            alert("Accès autorisé !");
-        });
-
 
 
     </script>
@@ -121,24 +102,18 @@
     <script>
 
         let sidemenu = document.getElementById("sidemenu")
-        let form = document.querySelector(".form")
+        let mainAcceuil = document.getElementById("main-acceuil")
         let footer = document.getElementById("footer")
 
         function openmenu() {
-            sidemenu.style.left = "0";
-            form.style.paddingLeft = "160px"
-            footer.style.paddingLeft = "160px"
+            sidemenu.style.right = "0";
 
         }
 
         function closemenu() {
-            sidemenu.style.left = "-200px";
-            form.style.paddingLeft = "100px"
-            footer.style.paddingLeft = "100px"
+            sidemenu.style.right = "-200px";
 
         }
-
-
     </script>
 </body>
 

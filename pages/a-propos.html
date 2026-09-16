@@ -22,19 +22,13 @@
                 <li><a href="/pages/a-propos.html">A propos</a></li>
                 <li><a href="/pages/cv.html">CV</a></li>
                 <li><a href="/pages/services.html">Services</a></li>
-                <li><a href="/pages/shop.html" class="blocked">Shop</a></li>
                 <li><a href="/pages/contact.html">Contact</a></li>
                 <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
             </ul>
             <i class="fa-solid fa-bars" onclick="openmenu()"></i>
         </nav>
-
-        <select name="lang" id="lang" class="lang">
-            <option value="index.html" selected class="FR">🇫🇷 Français</option>
-            <option value="/lang-package/about-en.html" class="EN">🇺🇸 English</option>
-        </select>
     </header>
-    <hr class="header-hr">
+
 
     <main class="main-about">
 
@@ -241,20 +235,16 @@
     <script>
 
         let sidemenu = document.getElementById("sidemenu")
-        let mainAbout = document.querySelector(".main-about")
+        let mainAcceuil = document.getElementById("main-acceuil")
         let footer = document.getElementById("footer")
 
         function openmenu() {
-            sidemenu.style.left = "0";
-            mainAbout.style.paddingLeft = "160px"
-            footer.style.paddingLeft = "160px"
+            sidemenu.style.right = "0";
 
         }
 
         function closemenu() {
-            sidemenu.style.left = "-200px";
-            mainAbout.style.paddingLeft = "100px"
-            footer.style.paddingLeft = "100px"
+            sidemenu.style.right = "-200px";
 
         }
 
