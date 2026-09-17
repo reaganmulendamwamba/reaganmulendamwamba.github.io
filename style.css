@@ -6,7 +6,7 @@
 
 body {
     color: #000;
-    mine-height :100vh;
+    mine-height: 100vh;
 }
 
 #main-acceuil,
@@ -556,6 +556,7 @@ textarea {
     justify-content: space-between;
     gap: 2rem;
 }
+
 
 .expertise-dev-web,
 .expertise-it-support,
