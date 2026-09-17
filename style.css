@@ -9,6 +9,11 @@ body {
     mine-height :100vh;
 }
 
+#main-acceuil,
+.form {
+    min-height: 80vh;
+}
+
 i {
     color: white;
     padding: 0.6rem;
@@ -81,7 +86,7 @@ header nav ul li a:hover::after {
     background-size: cover;
     color: white;
     padding: 1rem 4rem;
-    padding-right: 420px;
+    padding-right: 500px;
 
 }
 
@@ -92,10 +97,10 @@ header nav ul li a:hover::after {
 }
 
 .hero p {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     font-style: bold;
     color: #eddddd;
-    padding-bottom: 0.5rem;
+    padding-bottom: 2rem;
 }
 
 #metier {
@@ -562,27 +567,24 @@ textarea {
 }
 
 .expertise-no-code:hover {
-    color: red;
+    color: rgb(220, 209, 209);
     background: #1d1303;
-    transform: translateY(-12px);
+    transform: translateY(-2px);
     font-weight: 700;
-    font-size: 1.6rem;
 }
 
 .expertise-it-support:hover {
-    color: red;
+    color: rgb(220, 209, 209);
     background: #1d1303;
-    transform: translateY(-12px);
+    transform: translateY(-2px);
     font-weight: 700;
-    font-size: 1.6rem;
 }
 
 .expertise-dev-web:hover {
-    color: red;
+    color: rgb(220, 209, 209);
     background: #1d1303;
-    transform: translateY(-4px);
+    transform: translateY(-2px);
     font-weight: 700;
-    font-size: 1.6rem;
 }
 
 
@@ -754,6 +756,20 @@ nav .fa-solid {
 
 
 @media (max-width:1000px) {
+
+    header {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .whomoretext {
+        font-size: 1.1rem;
+    }
+
+    .whomoretext h3 {
+        font-size: 1.5rem;
+    }
+
     .hero img {
         display: inline-block;
         border-radius: 32px;
@@ -767,8 +783,12 @@ nav .fa-solid {
 
     #main-acceuil {
         background: #000;
-        padding: 3rem 2rem;
+        padding: 3rem 1rem;
         text-align: center;
+    }
+
+    #main-acceuil h2 {
+        font-size: 2rem;
     }
 
     .btn-hero {
@@ -818,6 +838,22 @@ nav .fa-solid {
 
     .card-cv {
         display: block;
+        padding: 1rem;
+    }
+
+    .experience-cv {
+        padding-top: 1rem;
+    }
+
+    .certifiactons-cv-container {
+        display: block;
+    }
+
+
+
+    .formation-cv h2,
+    .experience-cv h2 {
+        text-align: center;
     }
 
     .devise-container {
@@ -843,6 +879,11 @@ nav .fa-solid {
     .no-code-realisations {
         margin: 2rem;
     }
+
+    #main-acceuil p {
+        font-size: ;
+    }
+
 
 }
 

@@ -6,10 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio Personnal</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="/assets/veste.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 
-<body>
+<body class="body-in">
 
     <header>
         <div class="logo">
@@ -85,40 +86,6 @@
 
     </footer>
 
-
-
-
-
-    <script>
-
-        const lang = document.getElementById('lang')
-
-
-        lang.addEventListener('change', function () {
-            window.location.href = this.value;
-        })
-
-        const metiers = [
-            "Développeur Web Full Stack",
-            "IT Support",
-            "Passionné du No-Code"
-        ];
-
-        let index = 0;
-
-        setInterval(() => {
-            index++;
-
-            if (index === metiers.length) {
-                index = 0;
-            }
-
-            document.getElementById("metier").textContent = metiers[index];
-
-        }, 3000);
-
-    </script>
-
     <script>
 
         let sidemenu = document.getElementById("sidemenu")
@@ -134,6 +101,29 @@
             sidemenu.style.right = "-200px";
 
         }
+
+    </script>
+
+    <script>
+
+        const metiers = [
+            "Full Stack Web Developer",
+            "IT Support",
+            "No-Code Enthusiast"
+        ];
+
+        let index = 0;
+
+        setInterval(() => {
+            index++;
+
+            if (index === metiers.length) {
+                index = 0;
+            }
+
+            document.getElementById("metier").textContent = metiers[index];
+
+        }, 3000);
 
 
     </script>
