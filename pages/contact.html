@@ -43,17 +43,19 @@
         </div>
 
         <div class="form-droite-container">
-            <form>
-                <label for="firstname" id="firstname">Prénom</label>
+            <form id="contact-form">
+
+                <label for="firstname">Prénom</label>
                 <input type="text" name="firstname" id="firstname" required>
 
-                <label for="firstname" id="laststname">Nom</label>
-                <input type="text" name="laststname" id="laststname" required>
+                <label for="lastname">Nom</label>
+                <input type="text" name="lastname" id="lastname" required>
 
-                <label for="message" id="message">Message</label>
+                <label for="message">Message</label>
                 <textarea name="message" id="message" rows="8" required></textarea>
 
                 <button type="submit" class="btn-contact">Envoyer</button>
+
             </form>
         </div>
     </div>
@@ -85,6 +87,32 @@
 
 
     </footer>
+
+
+    <script>
+
+
+        const form = document.getElementById("contact-form");
+
+        form.addEventListener("submit", async function (event) {
+            event.preventDefault();
+
+            const data = {
+                firstname: document.getElementById("firstname").value,
+                lastname: document.getElementById("lastname").value,
+                message: document.getElementById("message").value
+            };
+
+            await fetch("https://script.google.com/macros/s/AKfycbwXBcReFEbr9z6HJqDkApzBDwgrJrBUa9NIjLEGBWsk_ET3_Cz419lO1bHBx3ED_tNsOA/exec", {
+                method: "POST",
+                body: JSON.stringify(data)
+            });
+
+            alert("Message envoyé avec succès !");
+            form.reset();
+        });
+
+    </script>
 
     <script>
 

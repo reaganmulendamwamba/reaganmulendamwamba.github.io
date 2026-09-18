@@ -41,7 +41,8 @@ header span {
 }
 
 header p {
-    font-size: 1rem;
+    font-size: 1.7rem;
+    padding: 1rem;
 }
 
 header nav ul li {
@@ -57,6 +58,11 @@ header nav ul li a {
     font-size: 1.1rem;
     position: relative;
     transition: .6s;
+}
+
+textarea {
+    padding: 1rem;
+    resize: none;
 }
 
 header nav ul li a::after {
